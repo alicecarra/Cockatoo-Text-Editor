@@ -1,6 +1,8 @@
 #ifndef _TEXTEDITOR_H_
 #define _TEXTEDITOR_H_
 
+#define _VERSION "0.0.2"
+
 /*** includes ***/
 #include <ctype.h>
 #include <errno.h>
@@ -13,6 +15,17 @@
 
 /*** defines ***/
 #define CTRL_KEY(k) ((k) & 0x1f)
+
+enum editorKey{
+	ARROW_LEFT = 1000,
+	ARROW_RIGHT,
+	ARROW_UP,
+	ARROW_DOWN,
+	HOME_KEY,
+	END_KEY,
+	PAGE_UP,
+	PAGE_DOWN
+};
 
 /*** data ***/
 struct editorConfig{
@@ -30,7 +43,7 @@ void disableRawMode();
 
 void enableRawMode();
 
-char editorReadKey();
+int editorReadKey();
 
 int getCursorPosition(int *rows, int *cols);
 
@@ -55,6 +68,8 @@ void editorRefreshScreen();
 
 /*** input ***/
 void editorProcessKeypress();
+
+void editorMoveCursor(int key);
 
 /** init **/
 void initEditor();
