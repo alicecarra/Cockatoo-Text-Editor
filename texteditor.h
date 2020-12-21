@@ -25,6 +25,7 @@
 #define CTRL_KEY(k) ((k) & 0x1f)
 
 enum editorKey{
+	BACKSPACE = 127,
 	ARROW_LEFT = 1000,
 	ARROW_RIGHT,
 	ARROW_UP,
@@ -72,6 +73,9 @@ int getWindowSize(int *rows, int *cols);
 int editorRowCxToRx(erow *row, int cx);
 void editorUpdateRow(erow *row);
 void editorAppendRow(char *s, size_t len);
+
+/*** editor operations ***/
+void editorInsertChar(int c);
 
 
 /*** file I/O ***/
