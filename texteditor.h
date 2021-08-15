@@ -7,6 +7,7 @@
 
 #define _VERSION "0.0.2"
 #define _TAB_STOP 8
+#define _QUIT_TIMES 3
 
 /*** includes ***/
 #include <ctype.h>
