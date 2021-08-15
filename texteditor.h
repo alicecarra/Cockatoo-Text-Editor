@@ -75,11 +75,17 @@ int getWindowSize(int *rows, int *cols);
 /*** row operations ***/
 int editorRowCxToRx(erow *row, int cx);
 void editorUpdateRow(erow *row);
-void editorAppendRow(char *s, size_t len);
+void editorInsertRow(int at, char *s, size_t len);
+void editorFreeRow(erow *row);
+void editorFreeRow(erow *row);
+void editorDelRow(int at);
+void editorRowAppendString(erow *row, char *s, size_t len);
+void editorRowDelChar(erow *row, int at);
 
 /*** editor operations ***/
 void editorInsertChar(int c);
-
+void editorInserNewline();
+void editorDelChar();
 
 /*** file I/O ***/
 void editorOpen();

@@ -1,2 +1,2 @@
 make:
-	gcc main.c texteditor.c -o ctk
+	gcc -Wall main.c texteditor.c -o ctk
