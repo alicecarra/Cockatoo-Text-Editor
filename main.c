@@ -1,4 +1,3 @@
-STEP 105
 #include "texteditor.h"
 
 int main(int argc, char *argv[]) {
@@ -8,7 +7,7 @@ int main(int argc, char *argv[]) {
 		editorOpen(argv[1]);
 	}
 	
-	editorSetStatusMessage("HELP: Ctrl-Q = quit");
+	editorSetStatusMessage("HELP:Ctrl-S = save  |   Ctrl-Q = quit");
 	
 	while (1) {
 		editorRefreshScreen();
